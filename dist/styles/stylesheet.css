@@ -1,0 +1,72 @@
+#bannerimage0 {
+  background-image: url("https://www.bungie.net/pubassets/pkgs/131/131878/Update_Patch_Header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+#bannertext {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  font-weight: bold;
+}
+
+.roster-name-size {
+  box-shadow: 10px 10px 15px black;
+  padding: 35px;
+  font-size: 24px;
+}
+
+.roster-submission-header {
+  margin-bottom: 30px;
+}
+
+.roster-form {
+  opacity: 0.8;
+}
+
+#RosterHeader {
+  /* text-shadow: -1px 0px 3px #fee7ea; */
+  /* font-weight: bold; */
+  font-size: 42px;
+  opacity: 0.6;
+  color: white;
+}
+.rosterSubmitButton {
+  opacity: 0.6;
+  color: white;
+  padding-top: 5px;
+  margin-bottom: 30px;
+  float: right;
+  text-shadow: 50px 0px 50px black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rosterSubmitButton:hover {
+  cursor: pointer;
+}
+
+.remove-from-roster {
+  position: absolute;
+  z-index: 100;
+  margin-top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: white;
+  opacity: 0.6;
+  text-shadow: 0px 3px 2px black;
+}
+.remove-from-roster:hover {
+  cursor: pointer;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: -99;
+}
