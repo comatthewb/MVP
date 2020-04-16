@@ -6,17 +6,31 @@ const Navbar = (props) => {
       <div className="col-md-3 text-center"></div>
       <div className="col-md-2 text-center">
         <div className="text-center navbar-item-parent">
-          <a className="navbar-item">HOME</a>
+          <a
+            className="navbar-item"
+            onClick={() => {
+              props.homeClickHandler();
+            }}
+          >
+            HOME
+          </a>
         </div>
       </div>
       <div className="col-md-2 text-center">
         <div className="text-center navbar-item-parent">
-          <a className="navbar-item">CALENDAR</a>
+          <a
+            className="navbar-item"
+            onClick={() => {
+              props.calendarClickHandler();
+            }}
+          >
+            CALENDAR
+          </a>
         </div>
       </div>
       <div className="col-md-2 text-center">
         <div className="text-center navbar-item-parent">
-          <a className="navbar-item">GUIDE</a>
+          <a className="navbar-item">GUIDES</a>
         </div>
       </div>
       <div className="col-md-2 text-center">

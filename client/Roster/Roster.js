@@ -56,44 +56,49 @@ class Roster extends React.Component {
     });
   }
   render() {
-    return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-3">
-            <h1 id="RosterHeader"> R O S T E R // </h1>
-            <div className="roster-submission-header">
-              <form onSubmit={this.addItem}>
-                <input
-                  id="roster-input"
-                  className="form-control roster-form"
-                  placeholder="Add Member"
-                  value={this.state.rosterItem}
-                  onChange={this.updateItem}
+    console.log(this.props.show)
+    if (this.props.show) {
+      return (
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-3">
+              <h1 id="RosterHeader"> R O S T E R // </h1>
+              <div className="roster-submission-header">
+                <form onSubmit={this.addItem}>
+                  <input
+                    id="roster-input"
+                    className="form-control roster-form"
+                    placeholder="Add Member"
+                    value={this.state.rosterItem}
+                    onChange={this.updateItem}
+                  />
+                </form>
+                <a className="rosterSubmitButton" onClick={this.addItem}>
+                  S U B M I T
+                </a>
+              </div>
+              <ul className="list-group">
+                <RosterItem
+                  emblems={this.state.emblems}
+                  rosterItem={this.state.roster}
+                  deleteItem={this.deleteItem}
                 />
-              </form>
-              <a className="rosterSubmitButton" onClick={this.addItem}>
-                S U B M I T
-              </a>
+              </ul>
+              <ol className="list-group">
+                <Bench
+                  state={this.state}
+                  benchItem={this.state.bench}
+                  deleteItem={this.deleteItem}
+                />
+              </ol>
             </div>
-            <ul className="list-group">
-              <RosterItem
-                emblems={this.state.emblems}
-                rosterItem={this.state.roster}
-                deleteItem={this.deleteItem}
-              />
-            </ul>
-            <ol className="list-group">
-              <Bench
-                state={this.state}
-                benchItem={this.state.bench}
-                deleteItem={this.deleteItem}
-              />
-            </ol>
+            <div className="col-lg-9"> </div>
           </div>
-          <div className="col-lg-9"> </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 

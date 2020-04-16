@@ -27,8 +27,11 @@
     "jquery": "^3.4.1",
     "mongoose": "^5.5.14",
     "nodemon": "^2.0.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-calendar": "^3.0.1",
     "react-dom": "^16.8.6",
+    "react-event-calendar": "^0.3.0",
     "webpack": "^4.42.1"
   },
   "devDependencies": {

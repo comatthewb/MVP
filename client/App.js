@@ -4,7 +4,7 @@ import Roster from "./Roster/Roster";
 import $ from "jquery";
 import Navbar from "./Roster/components/Navbar";
 import Profile from "./Roster/components/Profile";
-import Calendar from "./Roster/components/Calendar";
+import MyCalendar from "./Roster/components/Calendar";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,6 +15,22 @@ export default class App extends React.Component {
       navbarRender: true,
       profileRender: false,
     };
+  }
+
+  calendarClickHandler() {
+    this.setState({
+      calendarRender: true,
+      homeRender: false,
+      profileRender: false,
+    });
+  }
+
+  homeClickHandler() {
+    this.setState({
+      calendarRender: false,
+      homeRender: true,
+      profileRender: false,
+    });
   }
 
   // componentDidMount() {
@@ -33,10 +49,16 @@ export default class App extends React.Component {
     return (
       <div className="test">
         <div>
-          <Navbar />
+          <Navbar
+            homeClickHandler={this.homeClickHandler.bind(this)}
+            calendarClickHandler={this.calendarClickHandler.bind(this)}
+          />
         </div>
         <div className="container-fluid">
-          <Roster />
+          <Roster show={this.state.homeRender} />
+        </div>
+        <div>
+          <MyCalendar calendarRender={this.state.calendarRender} />
         </div>
       </div>
     );
