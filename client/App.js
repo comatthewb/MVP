@@ -2,11 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Roster from "./Roster/Roster";
 import $ from "jquery";
+import Navbar from "./Roster/components/Navbar";
+import Profile from "./Roster/components/Profile";
+import Calendar from "./Roster/components/Calendar";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      homeRender: true,
+      calendarRender: false,
+      navbarRender: true,
+      profileRender: false,
+    };
   }
 
   // componentDidMount() {
@@ -23,8 +31,13 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <Roster />
+      <div className="test">
+        <div>
+          <Navbar />
+        </div>
+        <div className="container-fluid">
+          <Roster />
+        </div>
       </div>
     );
   }

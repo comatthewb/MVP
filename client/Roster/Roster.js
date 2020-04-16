@@ -59,7 +59,7 @@ class Roster extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-lg-3">
             <h1 id="RosterHeader"> R O S T E R // </h1>
             <div className="roster-submission-header">
               <form onSubmit={this.addItem}>
@@ -90,7 +90,7 @@ class Roster extends React.Component {
               />
             </ol>
           </div>
-          <div className="col-md-10"> </div>
+          <div className="col-lg-9"> </div>
         </div>
       </div>
     );
