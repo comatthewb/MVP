@@ -56,7 +56,7 @@ class Roster extends React.Component {
     });
   }
   render() {
-    console.log(this.props.show)
+    console.log(this.props.show);
     if (this.props.show) {
       return (
         <div className="container-fluid">

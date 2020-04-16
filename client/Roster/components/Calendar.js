@@ -1,6 +1,7 @@
 import React from "react";
-import Calendar from "react-event-calendar";
-import PropTypes from "prop-types";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+// import css from "./main.css";
 
 class MyCalendar extends React.Component {
   constructor(props) {
@@ -18,13 +19,8 @@ class MyCalendar extends React.Component {
     console.log(this.props.calendarRender);
     if (this.props.calendarRender) {
       return (
-        <div className="container">
-          <Calendar
-            month={7}
-            year={2015}
-            events={events}
-            onEventClick={(target, eventData, day) => console.log(eventData)}
-          />
+        <div className="container" style={{ marginTop: "100px" }}>
+          <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
         </div>
       );
     } else {
