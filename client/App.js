@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Roster from "./Roster/Roster";
+import Roster from "./components/Roster/Roster";
 import $ from "jquery";
-import Navbar from "./Roster/components/Navbar";
-import Profile from "./Roster/components/Profile";
-import MyCalendar from "./Roster/components/Calendar";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import MyCalendar from "./components/Calendar";
+import Countdown from "./components/Countdown";
+import Guides from "./components/Guides";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -14,6 +16,7 @@ export default class App extends React.Component {
       calendarRender: false,
       navbarRender: true,
       profileRender: false,
+      guideRender: false,
     };
   }
 
@@ -22,6 +25,7 @@ export default class App extends React.Component {
       calendarRender: true,
       homeRender: false,
       profileRender: false,
+      guideRender: false,
     });
   }
 
@@ -30,20 +34,18 @@ export default class App extends React.Component {
       calendarRender: false,
       homeRender: true,
       profileRender: false,
+      guideRender: false,
     });
   }
 
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     $(".ytp-chrome-top ytp-show-cards-title").remove();
-  //     $(
-  //       ".ytp-unmute ytp-popup ytp-button ytp-unmute-animated ytp-unmute-shrink"
-  //     ).remove();
-  //     $(".ytp-pause-overlay ytp-scroll-min ytp-scroll-max").remove();
-  //     $(".ytp-watermark yt-uix-sessionlink").remove();
-  //     $(".ytp-cued-thumbnail-overlay").remove();
-  //   }, 4000);
-  // }
+  guidesClickHandler() {
+    this.setState({
+      calendarRender: false,
+      homeRender: false,
+      profileRender: false,
+      guideRender: true,
+    });
+  }
 
   render() {
     return (
@@ -52,13 +54,20 @@ export default class App extends React.Component {
           <Navbar
             homeClickHandler={this.homeClickHandler.bind(this)}
             calendarClickHandler={this.calendarClickHandler.bind(this)}
+            guidesClickHandler={this.guidesClickHandler.bind(this)}
           />
         </div>
         <div className="container-fluid">
-          <Roster show={this.state.homeRender} />
+          <Roster
+            show={this.state.homeRender}
+            homeRender={this.state.homeRender}
+          />
         </div>
         <div>
           <MyCalendar calendarRender={this.state.calendarRender} />
+        </div>
+        <div>
+          <Guides guideRender={this.state.guideRender} />
         </div>
       </div>
     );

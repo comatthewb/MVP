@@ -95,6 +95,82 @@
   cursor: pointer;
 }
 
+.countdown {
+  color: white;
+  opacity: 0.6;
+}
+
+#CountdownHeader {
+  color: white;
+  opacity: 0.6;
+}
+
+#riven-description-parent {
+  color: white;
+  opacity: 0.75;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid white;
+}
+
+#riven-description {
+  text-align: justify;
+}
+
+#guides-container {
+  padding-top: 175px;
+}
+
+#roster-parent-container {
+  padding-top: 50px;
+}
+
+#xur-parent-column {
+  padding-top: 10%;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+}
+
+#xur-item-description {
+  color: white;
+  font-weight: bold;
+  padding-top: 7.5px;
+  text-align: center;
+  opacity: 0.65;
+  font-style: italic;
+}
+
+#xur-item-image {
+  width: 125px;
+  height: 75px;
+
+  object-fit: contain;
+}
+
+.xur-item {
+  color: white;
+  font-size: 22px;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.xur-item-parent {
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: auto;
+  padding: 7px;
+}
+
+.xur-column {
+  padding-top: 15px;
+}
+
+.xur-header {
+  opacity: 0.6;
+}
+
 /* calendar css */
 
 @charset "UTF-8";
