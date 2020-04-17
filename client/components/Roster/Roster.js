@@ -44,8 +44,7 @@ class Roster extends React.Component {
 
   deleteItem(index) {
     var rosterCopy = this.state.roster.slice();
-    console.log("rosterCopy", rosterCopy);
-    console.log("index", index);
+
     rosterCopy.splice(index, 1);
 
     this.setState({ roster: rosterCopy });
@@ -58,7 +57,6 @@ class Roster extends React.Component {
     });
   }
   render() {
-    console.log(this.props.show);
     if (this.props.show) {
       return (
         <div className="container-fluid" id="roster-parent-container">

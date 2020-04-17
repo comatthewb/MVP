@@ -4,7 +4,7 @@ const Xur = (props) => {
   if (props.homeRender) {
     return (
       <div>
-        <h1 className="xur-header"> X U R | I N V E N T O R Y </h1>
+        <h1 className="xur-header"> X U R | I N V E N T O R Y // </h1>
         <div className="row">
           <div className="col-md-2 text-center xur-column">
             <div className="text-center xur-item-parent ">

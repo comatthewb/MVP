@@ -16,7 +16,6 @@ class MyCalendar extends React.Component {
   }
 
   render() {
-    console.log(this.props.calendarRender);
     if (this.props.calendarRender) {
       return (
         <div className="container" style={{ marginTop: "100px" }}>

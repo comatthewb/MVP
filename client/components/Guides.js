@@ -38,6 +38,29 @@ const Guides = (props) => {
             have time to spare before the buff expires. Choose one player to
             pick up the buff, and prepare to cleanse the lifts.
           </p>
+          <p id="riven-description">
+            After Riven has been defeated on both sides, have one player on each
+            side pick up the Orb. Jump up onto the pillar in the back of the
+            room and look through the Observatory glass into the amphitheater.
+          </p>
+
+          <p id="riven-description">
+            Once everyone is in position, the Orb holder will need to look
+            toward the Observatory. Here, they’ll see one of the many vault
+            symbols in a line — it’s very difficult to miss. This is where the
+            Observatory finally comes into play. While looking through the
+            glass, you’ll see many different symbols spread out around the
+            amphitheater — specifically around the steps and the center
+            platform.
+          </p>
+          <p id="riven-description">
+            Locate the symbol that the Orb player called. Once you’ve found it,
+            direct the Orb holder to the called symbol. This’ll take some time,
+            but you’ll eventually find a language that works for both of you,
+            such as “farthest up stairs,” or “middle plate right.” As the Orb
+            holder, you’ll see cylinders around the room as you get close to
+            them.
+          </p>
         </div>
         <div className="col-sm-2"></div>
       </div>
